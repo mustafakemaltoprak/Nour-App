@@ -4,27 +4,38 @@
     "slug": "Nour",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./public/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": ["@notifee/react-native"],
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8195677005736829~1767857486"
+      },
+      "bundleIdentifier": "io.nour.client",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Testing",
+        "NSLocationAlwaysUsageDescription": "Testing pls"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8195677005736829~1767857486"
+      },
+      "package": "io.nour.client"
     },
     "web": {
       "favicon": "./assets/favicon.png"
