@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   title: {
     marginLeft: 12.5,
     fontSize: 20,
-    fontFamily: 'avenir',
     fontWeight: '100',
   },
 });

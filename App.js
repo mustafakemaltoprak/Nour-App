@@ -20,9 +20,11 @@ export default function App() {
         }}
         initialRouteName="Profile"
       >
-        <Tab.Screen name="Applist" component={Applist} />
-        <Tab.Screen name="Profile" component={Profile} />
-        <Tab.Screen name="Sevap" component={SevapButton} />
+        <Tab.Group>
+          <Tab.Screen name="Applist" component={Applist} />
+          <Tab.Screen name="Profile" component={Profile} />
+          <Tab.Screen name="Sevap" component={SevapButton} />
+        </Tab.Group>
       </Tab.Navigator>
       <Image
         style={styles.cloud}

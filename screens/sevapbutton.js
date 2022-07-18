@@ -6,11 +6,21 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { AdMobInterstitial } from 'expo-ads-admob';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Modal,
+} from 'react-native';
+import LearnMore from './learnmore';
 
 const SevapButton = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   const interstital = async () => {
     await AdMobInterstitial.setAdUnitID(
       'ca-app-pub-3940256099942544/1033173712'
@@ -25,6 +35,16 @@ const SevapButton = () => {
   };
   return (
     <View style={styles.background}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(false);
+        }}
+      >
+        <LearnMore setModalVisible={setModalVisible} />
+      </Modal>
       <Image
         style={styles.mosque}
         source={require('../public/mosque-blue-compressed.png')}
@@ -56,7 +76,10 @@ const SevapButton = () => {
         >
           <Text style={styles.buttonText}>Sevap</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => setModalVisible(!modalVisible)}
+        >
           <Text style={styles.buttonText}>Learn More</Text>
         </TouchableOpacity>
       </View>
@@ -102,12 +125,6 @@ const styles = StyleSheet.create({
     height: 150,
     top: 300,
     right: 30,
-  },
-  cloud: {
-    position: 'absolute',
-    width: 600,
-    height: 150,
-    bottom: 0,
   },
   hadithPosition: {
     width: 400,

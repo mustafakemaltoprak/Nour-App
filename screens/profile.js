@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, Image } from 'react-native';
 import notifee, {
   TimestampTrigger,
   TriggerType,
@@ -9,7 +9,6 @@ import * as Location from 'expo-location';
 
 const Profile = () => {
   const [prayerTimes, setPrayerTimes] = useState(null);
-  const [errorMsg, setErrorMsg] = useState(null);
   const [location, setLocation] = useState(null);
 
   async function getLocation() {
@@ -59,7 +58,6 @@ const Profile = () => {
       date.setDate(date.getDate() + 1);
     }
 
-    // Create a time-based trigger
     const trigger: TimestampTrigger = {
       type: TriggerType.TIMESTAMP,
       timestamp: date.getTime(), // fire at 11:10am (10 minutes before meeting)
@@ -79,7 +77,6 @@ const Profile = () => {
         "Don't forget to journal your prayer in the app :)";
     }
 
-    // Create a trigger notification
     await notifee.createTriggerNotification(
       {
         id: `name`,

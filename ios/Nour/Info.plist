@@ -53,9 +53,9 @@
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>Allow $(PRODUCT_NAME) to access your location</string>
     <key>NSLocationAlwaysUsageDescription</key>
-    <string>Testing pls</string>
+    <string>We temporarily require your location data for your prayer times. Don't worry we never, under any circumstances, save your location on our servers.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Testing</string>
+    <string>We temporarily require your location data for your prayer times. Don't worry we never, under any circumstances, save your location on our servers.</string>
     <key>NSUserTrackingUsageDescription</key>
     <string>This identifier will be used to deliver personalized ads to you.</string>
     <key>SKAdNetworkItems</key>
