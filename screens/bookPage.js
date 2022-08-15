@@ -87,6 +87,7 @@ const bookPage = (props) => {
                       <Text>
                         <Text style={styles.number}>{el.number}</Text>
                         {'\n'}
+                        {'\n'}
                         <Text style={styles.arabic}>{el.text}</Text>
                       </Text>
                     </View>
@@ -150,8 +151,6 @@ const styles = StyleSheet.create({
   },
   arabic: {
     color: 'white',
-    marginLeft: 50,
-    marginTop: 25,
     fontSize: 15,
     fontWeight: 'bold',
   },
