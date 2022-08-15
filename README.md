@@ -2,11 +2,11 @@
 
 Nour is your helper in everything Islam.
 
-This is the mobile app version of my Nour project.
+This is the mobile app version of my [Nour](https://github.com/mustafakemaltoprak/Nour) project.
 
 <br>
 
-![Screen Recording 2022-06-04 at 20 49 41](https://user-images.githubusercontent.com/96595583/172021607-9836fb5e-c339-4687-b769-d89236e7d394.gif)
+![Screen Recording 2022-08-15 at 14 07 21 (1)](https://user-images.githubusercontent.com/96595583/184633866-2dacc4e2-3540-4124-9084-a17aa4fc5e4b.gif)
 
 ## Get started
 
