@@ -23,10 +23,27 @@ const LearnMore = (props) => {
         onPress={() => {
           props.setModalVisible(false);
         }}
-        style={styles.goBack}
+        style={styles.goBackTouchable}
       >
-        <Text style={styles.goBack}>X</Text>
+        <Image
+          style={styles.goBackView}
+          source={require('../public/incorrect-button-compressed.png')}
+        />
       </TouchableOpacity>
+      <Text style={styles.textTitle}>- How does it work?</Text>
+      <Text style={styles.textDescription}>
+        By clicking on the "Sevap" (Turkish for Good Deed) button, you
+        will receive an ad that you can watch.
+        {'\n'}
+        {'\n'}
+        For every ad watched, we receive a small payment & use a part of it to
+        donate to charity.
+        {'\n'}
+        {'\n'}
+        The rest will be spent on marketing to spread the word and help out more
+        of our brothers & sisters, and also pay for the maintanenance and costs
+        of our servers etc.
+      </Text>
     </SafeAreaView>
   );
 };
@@ -50,10 +67,24 @@ const styles = StyleSheet.create({
     marginTop: 100,
   },
   goBack: {
-    top: 25,
-    right: 20,
     fontSize: 20,
     position: 'absolute',
+    fontWeight: '300',
+    color: 'white',
+    textAlign: 'center',
+    right: 6.5,
+  },
+  goBackTouchable: {
+    position: 'absolute',
+    top: 25,
+    right: 20,
+  },
+  goBackView: {
+    top: 30,
+    right: 15,
+    position: 'absolute',
+    width: 25,
+    height: 25,
   },
   title: {
     top: 100,
@@ -61,5 +92,29 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: 'bold',
     fontSize: 30,
+  },
+  textTitle: {
+    position: 'absolute',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    fontSize: 25,
+    padding: 25,
+    left: 0,
+    top: 450,
+  },
+  textDescription: {
+    position: 'absolute',
+    color: '#FFFFFF',
+    fontWeight: '500',
+    fontSize: 17,
+    padding: 25,
+    bottom: 150,
+  },
+  cloud: {
+    position: 'absolute',
+    width: 600,
+    height: 150,
+    bottom: 0,
+    right: -100,
   },
 });

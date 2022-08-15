@@ -2,11 +2,13 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 export default function AppListItem(props) {
+
   return (
     <View>
       <TouchableOpacity
         style={styles.itemContainer}
-        onPress={() => props.swipe(2)}
+        onPress={() => 
+        props.navigation ? props.navigation.navigate("Sevap") : props.modal(true)}
       >
         <Image style={styles.logo} source={props.path} />
         <Text style={styles.title}>{props.title}</Text>
@@ -21,9 +23,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: 341,
     height: 90,
-    backgroundColor: 'white',
     borderRadius: 50,
     marginBottom: 35,
+    backgroundColor: "white",
     shadowColor: '#000',
     shadowOffset: { width: 5, height: 5 },
     shadowOpacity: 0.25,

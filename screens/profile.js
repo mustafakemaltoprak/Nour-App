@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Image } from 'react-native';
-import notifee, {
-  TimestampTrigger,
-  TriggerType,
-  RepeatFrequency,
-} from '@notifee/react-native';
+// import notifee, {
+//   TimestampTrigger,
+//   TriggerType,
+//   RepeatFrequency,
+// } from '@notifee/react-native';
 import * as Location from 'expo-location';
 
 const Profile = () => {
@@ -20,7 +20,6 @@ const Profile = () => {
 
     let location = await Location.getCurrentPositionAsync({});
     setLocation(location);
-    console.log('this is your location', location);
   }
 
   if (!location) {
@@ -41,61 +40,61 @@ const Profile = () => {
     getTime();
   }
 
-  async function onCreateTriggerNotification(time, name) {
-    const hour = time.substring(0, 2);
-    const minute = time.substring(3, 5);
+  // async function onCreateTriggerNotification(time, name) {
+  //   const hour = time.substring(0, 2);
+  //   const minute = time.substring(3, 5);
 
-    await notifee.requestPermission();
+  //   await notifee.requestPermission();
 
-    let date = new Date(Date.now());
-    let checkDate = new Date(Date.now());
+  //   let date = new Date(Date.now());
+  //   let checkDate = new Date(Date.now());
 
-    date.setHours(hour);
-    date.setMinutes(minute);
-    date.setSeconds(0);
+  //   date.setHours(hour);
+  //   date.setMinutes(minute);
+  //   date.setSeconds(0);
 
-    if (checkDate > date) {
-      date.setDate(date.getDate() + 1);
-    }
+  //   if (checkDate > date) {
+  //     date.setDate(date.getDate() + 1);
+  //   }
 
-    const trigger: TimestampTrigger = {
-      type: TriggerType.TIMESTAMP,
-      timestamp: date.getTime(), // fire at 11:10am (10 minutes before meeting)
-      repeatFrequency: RepeatFrequency.DAILY,
-    };
+  //   const trigger: TimestampTrigger = {
+  //     type: TriggerType.TIMESTAMP,
+  //     timestamp: date.getTime(), // fire at 11:10am (10 minutes before meeting)
+  //     repeatFrequency: RepeatFrequency.DAILY,
+  //   };
 
-    let randomNumber = Math.floor(Math.random() * 3);
+  //   let randomNumber = Math.floor(Math.random() * 3);
 
-    let pushNotificationMessage = '';
+  //   let pushNotificationMessage = '';
 
-    if (randomNumber === 0) {
-      pushNotificationMessage = "It's time for your prayer";
-    } else if (randomNumber === 1) {
-      pushNotificationMessage = 'May your prayer be accepted';
-    } else if (randomNumber === 2) {
-      pushNotificationMessage =
-        "Don't forget to journal your prayer in the app :)";
-    }
+  //   if (randomNumber === 0) {
+  //     pushNotificationMessage = "It's time for your prayer";
+  //   } else if (randomNumber === 1) {
+  //     pushNotificationMessage = 'May your prayer be accepted';
+  //   } else if (randomNumber === 2) {
+  //     pushNotificationMessage =
+  //       "Don't forget to journal your prayer in the app :)";
+  //   }
 
-    await notifee.createTriggerNotification(
-      {
-        id: `name`,
-        title: `${name}`,
-        body: pushNotificationMessage,
-      },
-      trigger
-    );
+  //   await notifee.createTriggerNotification(
+  //     {
+  //       id: `name`,
+  //       title: `${name}`,
+  //       body: pushNotificationMessage,
+  //     },
+  //     trigger
+  //   );
 
-    console.log(`Created reminder for ${date}`);
-  }
+  //   console.log(`Created reminder for ${date}`);
+  // }
 
-  if (prayerTimes) {
-    onCreateTriggerNotification(prayerTimes.Fajr, 'Fajr');
-    onCreateTriggerNotification(prayerTimes.Dhuhr, 'Dhuhr');
-    onCreateTriggerNotification(prayerTimes.Asr, 'Asr');
-    onCreateTriggerNotification(prayerTimes.Maghrib, 'Maghrib');
-    onCreateTriggerNotification(prayerTimes.Isha, "Isha'a");
-  }
+  // if (prayerTimes) {
+  //   onCreateTriggerNotification(prayerTimes.Fajr, 'Fajr');
+  //   onCreateTriggerNotification(prayerTimes.Dhuhr, 'Dhuhr');
+  //   onCreateTriggerNotification(prayerTimes.Asr, 'Asr');
+  //   onCreateTriggerNotification(prayerTimes.Maghrib, 'Maghrib');
+  //   onCreateTriggerNotification(prayerTimes.Isha, "Isha'a");
+  // }
 
   return (
     <View style={styles.background}>

@@ -24,7 +24,10 @@
       "bundleIdentifier": "io.nour.client",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "We temporarily require your location data for your prayer times. Don't worry we never, under any circumstances, save your location on our servers.",
-        "NSLocationAlwaysUsageDescription": "We temporarily require your location data for your prayer times. Don't worry we never, under any circumstances, save your location on our servers."
+        "NSLocationAlwaysUsageDescription": "We temporarily require your location data for your prayer times. Don't worry we never, under any circumstances, save your location on our servers.",
+        "UIBackgroundModes": [
+          "audio"
+        ]
       }
     },
     "android": {

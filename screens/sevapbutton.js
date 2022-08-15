@@ -141,6 +141,13 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 16.5,
   },
+  cloud: {
+    position: 'absolute',
+    width: 600,
+    height: 150,
+    bottom: 0,
+    right: -100,
+  },
 });
 
 export default SevapButton;

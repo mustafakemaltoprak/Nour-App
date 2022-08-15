@@ -56,6 +56,8 @@
     <string>We temporarily require your location data for your prayer times. Don't worry we never, under any circumstances, save your location on our servers.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>We temporarily require your location data for your prayer times. Don't worry we never, under any circumstances, save your location on our servers.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow $(PRODUCT_NAME) to access your microphone</string>
     <key>NSUserTrackingUsageDescription</key>
     <string>This identifier will be used to deliver personalized ads to you.</string>
     <key>SKAdNetworkItems</key>
@@ -64,6 +66,10 @@
         <key>SKAdNetworkIdentifier</key>
         <string>cstr6suwn9.skadnetwork</string>
       </dict>
+    </array>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>audio</string>
     </array>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>
