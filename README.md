@@ -6,7 +6,7 @@ This is the mobile app version of my [Nour](https://github.com/mustafakemaltopra
 
 <br>
 
-![Screen Recording 2022-08-15 at 14 07 21 (1)](https://user-images.githubusercontent.com/96595583/184633866-2dacc4e2-3540-4124-9084-a17aa4fc5e4b.gif)
+[Untitled.webm](https://user-images.githubusercontent.com/96595583/184662647-347b78b3-aff7-4c61-b5f9-b2359259b7ac.webm)
 
 ## Get started
 
